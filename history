@@ -1,0 +1,295 @@
+cat git-bash-history.txt
+    1  yum install wget tree -y
+    2  sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    3  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+    4  sudo yum upgrade
+    5  sudo yum install fontconfig java-21-openjdk
+    6  sudo yum install jenkins
+    7  sudo systemctl daemon-reload
+    8  systemctl enable jenkins
+    9  systemctl status jenkins
+   10    systemctl start jenkins
+   11    systemctl status jenkins
+   12  cat /var/lib/jenkins/secrets/initialAdminPassword
+   13  clear
+   14  git --version
+   15  sudo dnf install git -y
+   16  git --version
+   17  which git
+   18  sudo dnf install maven -y
+   19  mvn -version
+   20  sudo systemctl restart jenkins
+   21  sudo su - jenkins
+   22  mvn -version
+   23   clear
+   24  java -version
+   25  sudo su - jenkins
+   26  java -version
+   27  sudo dnf install java-11-openjdk-devel -y
+   28  sudo alternatives --config java
+   29  sudo alternatives --config javac
+   30  java -version
+   31  javac -version
+   32  sudo dnf install java-11-openjdk-devel -y
+   33  There is 1 program that provides 'java'.
+   34    Selection    Command
+   35  -----------------------------------------------
+   36  sudo mkdir -p /opt/java
+   37  cd /opt/java
+   38  sudo wget https://github.com/adoptium/temurin11-binaries/releases/latest/download/OpenJDK11U-jdk_x64_linux_hotspot.tar.gz
+   39  cd /opt/java
+   40  sudo wget https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.22+7/OpenJDK11U-jdk_x64_linux_hotspot_11.0.22_7.tar.gz
+   41  sudo tar -xzf OpenJDK11U-jdk_x64_linux_hotspot_11.0.22_7.tar.gz
+   42  ls
+   43  sudo alternatives --install /usr/bin/java java /opt/java/jdk-11.0.22+7/bin/java 2
+   44  sudo alternatives --install /usr/bin/javac javac /opt/java/jdk-11.0.22+7/bin/javac 2
+   45  sudo alternatives --config java
+   46  sudo alternatives --config javac
+   47  java -version
+   48  javac -version
+   49  sudo systemctl restart jenkins
+   50  sudo systemctl status jenkins.service
+   51  sudo journalctl -xeu jenkins.service
+   52  clear
+   53  sudo systemctl status jenkins.service -l
+   54  sudo cat /var/log/jenkins/jenkins.log | tail -30
+   55  sudo journalctl -u jenkins.service --no-pager | grep -i java -A5 -B5
+   56  sudo alternatives --config java
+   57  sudo systemctl restart jenkins
+   58  sudo systemctl status jenkins
+   59  sudo dnf install -y yum-utils
+   60  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+   61  sudo dnf install -y docker-ce docker-ce-cli containerd.io
+   62  sudo systemctl start docker
+   63  sudo systemctl enable docker
+   64  sudo usermod -aG docker jenkins
+   65  sudo systemctl restart jenkins
+   66  docker --version
+   67  sudo docker pull sonarqube:lts-community
+   68  sudo docker run -d   --name sonarqube   -p 9000:9000   sonarqube:lts-community
+   69  sudo docker run -d   --name sonarqube   -p 9000:9000   sonarqube:lts-community
+   70  sudo docker ps
+   71  mvn -version
+   72  sudo dnf install -y wget
+   73  wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_0.48.4_Linux-64bit.rpm
+   74  sudo rpm -ivh trivy_0.48.4_Linux-64bit.rpm
+   75  sudo rpm -ivh https://github.com/aquasecurity/trivy/releases/latest/download/trivy_0.69.1_Linux-64bit.rpm
+   76  docker ps
+   77  mvn -version
+   78  java -version
+   79  trivy --version
+   80  java -version
+   81  docker images
+   82  docker ps -a
+   83  ls -lrtha
+   84  cd/opt/
+   85  pwd
+   86  cd ..
+   87  pwd
+   88  git clone https://github.com/malathi-shetty/Praveen_Jenkins-Project-HandsOn-Java_app_3.0.git
+   89  ls -lrta
+   90  maven clean install -Dskip Tests
+   91  mvn clean install -DskipTests
+   92  sudo dnf install -y maven
+   93  mvn clean install
+   94  cd Praveen_Jenkins-Project-HandsOn-Java_app_3.0
+   95  cd /opt/Praveen_Jenkins-Project-HandsOn-Java_app_3.0
+   96  ls
+   97  mvn clean install -DskipTests
+   98  mvn clean install
+   99  ls
+  100  lear
+  101  clear
+  102  sudo alternatives --config java
+  103  sudo alternatives --set java /usr/lib/jvm/java-11-openjdk-*/bin/java
+  104  sudo alternatives --set javac /usr/lib/jvm/java-11-openjdk-*/bin/javac
+  105  java -version
+  106  mvn clean install -DskipTests
+  107  java -version
+  108  javac -version
+  109  rm -rf ~/.m2/repository
+  110  mvn clean install -DskipTests
+  111  mvn -version
+  112  clear
+  113  ls /usr/lib/jvm/
+  114  export JAVA_HOME=/usr/lib/jvm/temurin-11-jdk
+  115  export PATH=$JAVA_HOME/bin:$PATH
+  116  echo $JAVA_HOME
+  117  mvn -version
+  118  sudo dnf install java-11-openjdk java-11-openjdk-devel -y
+  119  mvn clean install -DskipTests
+  120  sudo dnf install java-11-openjdk java-11-openjdk-devel -y
+  121  clear
+  122  export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+  123  export PATH=$JAVA_HOME/bin:$PATH
+  124  mvn -version
+  125  mvn clean install -DskipTests
+  126  clear
+  127  mvn clean install -DskipTests
+  128  rm -rf ~/.m2/repository/org/apache/maven/plugins/maven-compiler-plugin
+  129  rm -rf target
+  130  mvn clean install -U -DskipTests
+  131  rm -rf target
+  132  mvn clean install -U -DskipTests
+  133  mvn clean install -DskipTests
+  134  clear
+  135  mvn clean install -DskipTests
+  136  clear
+  137  <?xml version="1.0" encoding="UTF-8"?>
+  138  <project xmlns="http://maven.apache.org/POM/4.0.0"
+  139           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  140           xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  141      <modelVersion>4.0.0</modelVersion>
+  142      <parent>
+  143          <groupId>org.springframework.boot</groupId>
+  144          <artifactId>spring-boot-starter-parent</artifactId>
+  145          <version>3.2.5</version>
+  146          <relativePath/>
+  147      </parent>
+  148      <groupId>com.minikube.sample</groupId>
+  149      <artifactId>kubernetes-configmap-reload</artifactId>
+  150      <version>0.0.1-SNAPSHOT</version>
+  151      <packaging>jar</packaging>
+  152      <properties>
+  153          <java.version>17</java.version>
+  154      </properties>
+  155      <dependencyManagement>
+  156          <dependencies>
+  157              <dependency>
+  158                  <groupId>org.springframework.cloud</groupId>
+  159                  <artifactId>spring-cloud-dependencies</artifactId>
+  160                  <version>2023.0.1</version>
+  161                  <type>pom</type>
+  162                  <scope>import</scope>
+  163              </dependency>
+  164          </dependencies>
+  165      </dependencyManagement>
+  166  clear
+  167  mvn -v
+  168  vi /etc/profile
+  169  source /etc/profile
+  170  mvn -v
+  171  rm -rf target
+  172  mvn clean install -DskipTests
+  173  clear
+  174  vi pom.xml
+  175  mvn clean install -DskipTests
+  176  clear
+  177  mvn clean install -DskipTests
+  178  git pull
+  179  git add .
+  180  git commit -m "sync changes"
+  181  git pull origin main --rebase
+  182  git push origin main
+  183  git pull
+  184  git add .
+  185  git commit -m "sync changes"
+  186  git pull origin main --rebase
+  187  vi MinikubeSampleApplicationTests.java
+  188  mvn clean install -DskipTests
+  189  ls
+  190  vi Dockerfile
+  191  docker images
+  192  docker run -d -p 8081:8081 shettymalathi113/java-webapp:1.1
+  193  docker ps -a
+  194  docker logs 27bc8f6f04c9
+  195  docker exec -it 27bc8f6f04c9 /bin/sh
+  196  clear
+  197  git remote set-url origin https://shettymalathi113:eKA@github.com/malathi-shetty/Praveen_Jenkins-Project-HandsOn-Java_app_3.0.git
+  198  git status
+  199  git add .
+  200  git commit -m "sync changes"
+  201  git pull origin main --rebase
+  202  git push origin main
+  203  ssh-keygen -t ed25519 -C "shettymalathi113@gmail.com"
+  204  cat ~/.ssh/id_ed25519.pub
+  205  cd ..
+  206  ssh-keygen -t ed25519 -C "shettymalathi113@gmail.com"
+  207  cat ~/.ssh/id_ed25519.pub
+  208  git remote set-url origin git@github.com:malathi-shetty/Praveen_Jenkins-Project-HandsOn-Java_app_3.0.git
+  209  ssh -T git@github.com
+  210  git push origin main
+  211  cd /root/Praveen_Jenkins-Project-HandsOn-Java_app_3.0
+  212  cd Praveen_Jenkins-Project-HandsOn-Java_app_3.0
+  213  git push origin main
+  214  git status
+  215  git push origin main
+  216  clear
+  217  git remote -v
+  218  git remote set-url origin git@github.com:malathi-shetty/Praveen_Jenkins-Project-HandsOn-Java_app_3.0.git
+  219  git remote -v
+  220  git push origin main
+  221  rm "eval \"$(ssh-agent -s)\""
+  222  rm "eval \"$(ssh-agent -s)\".pub"
+  223  git status
+  224  rm "eval \"$(ssh-agent -s)\""
+  225  ls -b
+  226  eval\ \"\$\(ssh-agent\ -s\)\"
+  227  eval\ \"\$\(ssh-agent\ -s\)\".pub
+  228  rm "eval\ \"\$\(ssh-agent\ -s\)\""
+  229  rm "eval\ \"\$\(ssh-agent\ -s\)\".pub"
+  230  rm eval*
+  231  git status
+  232  clear
+  233  history
+  234  history > git-bash-history.txt
+  235  git add git-bash-history.txt
+  236  git commit -m "Added Git Bash history"
+  237  git push
+  238  sudo lsof -i:8081   # Check if something is listening on port 8081
+  239  clear
+  240  ping 15.206.186.125
+  241  curl http://15.206.186.125:8081
+  242  ping 15.206.186.125
+  243  curl http://15.206.186.125:8081
+  244  ps -ef | grep nexus
+  245  clear
+  246  # Example using git filter-repo
+  247  git filter-repo --path git-bash-history.txt --invert-paths
+  248  # Example using git filter-repo
+  249  git filter-repo --path git-bash-history.txt --invert-paths
+  250  git reset HEAD~1
+  251  # remove or edit the offending file
+  252  git add .
+  253  git commit -m "Removed secret"
+  254  git push origin main --force
+  255  systemctl status nexus
+  256  # or
+  257  /opt/nexus/bin/nexus start
+  258  docker run -d -p 8081:8081 shettymalathi113/java-webapp:1.1
+  259  docker run -d -p 8090:8081 shettymalathi113/java-webapp:1.1
+  260  curl http://15.206.186.125:8090
+  261  clear
+  262  docker ps
+  263  sudo ufw status
+  264  sudo iptables -L -n
+  265  docker stop elated_mendel
+  266  docker rm elated_mendel
+  267  curl http://15.206.186.125:8090
+  268  docker ps
+  269  docker ps -a
+  270  docker logs heuristic_gates
+  271  sudo iptables -I INPUT -p tcp --dport 8090 -j ACCEPT
+  272  sudo service iptables save   # optional
+  273  # or for firewalld:
+  274  sudo firewall-cmd --permanent --add-port=8090/tcp
+  275  sudo firewall-cmd --reload
+  276  clear
+  277  vi .gitignore
+  278  history > git-bash-history.txt
+  279  git add git-bash-history.txt
+  280  git commit -m "Added Git Bash history"
+  281  git push
+  282  git rm --cached git-bash-history.txt
+  283  echo "git-bash-history.txt" >> .gitignore
+  284  git add .gitignore
+  285  git commit -m "Remove bash history and ignore it"
+  286  git filter-branch --force --index-filter "git rm --cached --ignore-unmatch git-bash-history.txt" --prune-empty --tag-name-filter cat -- --all
+  287  git push origin main --force
+  288  vi git-bash-history.txt
+  289  git reset --soft HEAD~2
+  290  git add git-bash-history.txt
+  291  git commit -m "Removed secret from history file"
+  292  git push origin main --force
+  293  history > git-bash-history.txt
